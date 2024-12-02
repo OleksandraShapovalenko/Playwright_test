@@ -14,8 +14,7 @@ jobs:
     name: 'Run Playwright Tests'
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.48.2-jammy
-    steps:
+      image: mcr.microsoft.com/playwright:v1.49.0-jammy
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
