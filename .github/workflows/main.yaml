@@ -1,6 +1,6 @@
 name: Playwright Tests
 on:
-  pull_request:
+  push:
     branches: [playwright_fixtures]
   workflow_dispatch:
     inputs:
