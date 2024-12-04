@@ -7,20 +7,13 @@ const authFile = path.join(__dirname, '../.auth/user.json');
 export const test = base.extend<{
     userGarage: any; 
   }>({
-    userGarage: async ({ browser }, use) => {
-        const loggedInContext = await browser.newContext({
-          httpCredentials: {
-            username: 'guest',
-            password: 'welcome2qauto',
-          },
-        });
+    userGarage: async ({ page }, use) => {
 
-        const loggedInPage = await loggedInContext.newPage();
-        await loggedInPage.goto('https://qauto.forstudy.space/panel/garage');
+        await page.goto('https://qauto.forstudy.space/panel/garage');
 
-        await use(loggedInPage);
+        await use(page);
     
-        await loggedInContext.close();
+        await page.close();
       },
     });
     

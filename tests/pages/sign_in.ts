@@ -31,10 +31,12 @@ class SignUp{
 
         await this.nameField.fill('Low')
         await this.lastnameField.fill("Sam")
-        await this.emailField.fill('17-dp@test.com')
+        await this.emailField.fill(`${Date.now()}-dp@test.com`)
         await this.passwordField.fill('123456789Qq')
         await this.repasswordField.fill('123456789Qq')
         await this.registerButton.click()
+        await this.page.screenshot({ path: 'screenshot.png' });
+
     }
 }
 module.exports = SignUp;

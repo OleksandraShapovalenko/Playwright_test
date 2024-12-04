@@ -17,7 +17,7 @@ test.describe("SignUp", () => {
     const lastnameFieldLocator = page.locator("#signupLastName");
     await lastnameFieldLocator.fill("JavaScript");
     const emailFieldLocator = page.locator("#signupEmail");
-    await emailFieldLocator.fill("14-dp@gmail.com");
+    await emailFieldLocator.fill(`${Date.now()}-dp@gmail.com`);
     const passwordFieldLocator = page.locator("#signupPassword");
     await passwordFieldLocator.fill("123456789Qq");
     const repasswordFieldLocator = page.locator("#signupRepeatPassword");
